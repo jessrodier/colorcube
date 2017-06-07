@@ -89,7 +89,7 @@ button {
   border: $form-input-border-width solid $form-input-border-color;
   cursor: pointer;
   display: inline-block;
-  width: auto;
+  width: 100%;
 }
 
 // ! ===== Special rules for older Safari and iOS =====

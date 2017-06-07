@@ -59,8 +59,11 @@ h5,
 .echo,
 h6,
 .foxtrot {
+  font-family: $font-sans;	
+  font-weight: 900;
+  font-style: normal;
   clear: both;
-  color: palette(mono, 90);
+  color: palette(mono, 75);
 }
 
 h1,

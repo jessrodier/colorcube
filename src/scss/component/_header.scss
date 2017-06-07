@@ -1,35 +1,61 @@
 // @file header.scss
 .cc-branding {
-  background-color: palette(mono, 10);
-  border-bottom: 1px solid palette(mono, 25);
-  padding: 1rem 2rem;
+	background-color: palette(brand, denim);
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	position: relative;
+	margin-bottom: 4rem;
+	padding: 2rem;
 
+	@include media($large-up) {
+		margin-bottom: 125px;
+	}
+	
+	&:after {
+		content: url('../../img/wave-top.svg');
+		position: absolute;
+		bottom: -200px;
+		left: 0;
+		right: 0;
+		width: 100%;
+		height: 200px;
+		z-index: -1;
+		border-top: solid palette(brand, denim) 3px;
+	}	
+    
   &__title {
     font-size: 3rem;
     letter-spacing: .03125em;
+    color: palette(mono, white);
+    font-weight: 900;
+    font-style: normal;
   }
 
   &__subtitle {
+	text-align: center;
     font-size: 1.25rem;
+    color: palette(mono, white);
+    font-weight: 300;
+    font-style: normal;
+  }
+  
+  &__link {
+	  @include touch-hover() {
+		  color: palette(mono, white);
+		  text-decoration: none;
+	  }
+	  
+	  @include touch-hover('hover') {
+		  color: palette(mono, white); 
+		  text-decoration: none;
+	  }
   }
 
   &__logo {
-    display: inline-block;
     vertical-align: middle;
+	width: 10rem;
   }
 
-  @include media($large-up) {
-    @include display(flex);
-    @include flex-flow(row nowrap);
-    @include align-items(center);
-
-    &__title,
-    &__subtitle {
-      width: 50%;
-    }
-
-    &__subtitle {
-      text-align: right;
-    }
-  }
 }

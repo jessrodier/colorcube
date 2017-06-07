@@ -1,6 +1,43 @@
 // @file footer.scss
 .cc-foot {
-  background-color: #f2f2f2;
-  border-top: 1px solid #ccc;
-  padding: 1rem 2rem;
+  background-color: palette(brand, denim);
+  color: palette(mono, white);
+  text-align: center;
+  position: relative;
+  padding: 2rem 1rem;
+  
+  @include media($large-up) {
+  	margin-top: 200px;
+  	margin-top: 200px;
+  }
+  
+	&:before {
+	content: url('../../img/wave-bottom.svg');
+	position: absolute;
+	top: -50px;
+	left: 0;
+	right: 0;
+	width: 100%;
+	height: 50px;
+	z-index: -1;
+	
+	@include media($large-up) {
+		top: -225px;
+		height: 225px;
+	}
+	}
+	
+  &--text {
+	  margin-bottom: 0;
+  }	
+  
+  &__link {
+  	 @include touch-hover() {
+		  color: palette(mono, white);
+	  }
+	  
+	 @include touch-hover('hover') {
+		  color: palette(mono, white);
+	  }
+  }
 }
